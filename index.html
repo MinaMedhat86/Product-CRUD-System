@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/normlize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Product CRUD System</title>
+</head>
+<body>
+                        <!-- Start CRUD System Input Data -->
+    <div class="container my-5 crud-sys shadow-sm p-5 ">
+        <h1 class="display-4 fw-bolder">Product Management System</h1>
+
+        <label for="productName" class="mb-2 fw-semibold"> Product Name</label>
+        <input type="text" class="form-control mb-4" id="productName" placeholder="ex : Samsoung">
+
+        <label for="productSalary" class="mb-2 fw-semibold"> Product Salary</label>
+        <input type="text" id="productSalary" class="form-control mb-4"  placeholder="ex : 8000">
+
+        <label for="productCategory" class="mb-2 fw-semibold"> Product Category</label>
+        <input type="text" id="productCategory" class="form-control mb-4" placeholder="ex : Mobile">
+
+        <label for="productDesc" class="mb-2 fw-semibold"> Product Description</label>
+        <textarea type="text" id="productDesc" class="form-control mb-4"  placeholder="ex : Good Product"></textarea>
+
+        <button onclick="addProduct()" class="btn btn-success w-100 text-white text-black d-block fw-semibold btn-lg" id="myBtn">Add Product</button>
+    </div>
+                        <!-- End CRUD System Input Data -->
+
+                        <!-- Start Of Table  -->
+    <div class="container text-center">
+        <input type="text" oninput="searchProduct(this.value)" placeholder="Search By Name .." class="mb-3 w-100 form-control">
+    <table class="table">
+        <thead>
+            <th>Index</th>
+            <th>Product Name</th>
+            <th>Salary</th>
+            <th>Category</th>
+            <th> Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    </div>
+
+
+
+
+
+                        <!-- End Of Table -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

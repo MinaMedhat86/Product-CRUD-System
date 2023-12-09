@@ -1,0 +1,6 @@
+.crud-sys{
+    background-color:rgba(235, 235, 235, 0.767);
+}
+.crud-sys textarea {
+    resize: none;
+}
