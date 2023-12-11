@@ -14,13 +14,16 @@
         <h1 class="display-4 fw-bolder">Product Management System</h1>
 
         <label for="productName" class="mb-2 fw-semibold"> Product Name</label>
-        <input type="text" class="form-control mb-4" id="productName" placeholder="ex : Samsoung">
+        <input type="text" oninput="validationName()" class="form-control mb-4" id="productName" placeholder="ex : Samsoung">
+        <p id="regexMessegeName" class="alert alert-danger d-none text-center">Invalid Because Must Start With UpperCase</p>
 
         <label for="productSalary" class="mb-2 fw-semibold"> Product Salary</label>
-        <input type="text" id="productSalary" class="form-control mb-4"  placeholder="ex : 8000">
+        <input type="text" oninput="validationSalary()" id="productSalary" class="form-control mb-4"  placeholder="ex : 8000">
+        <p id="regexMessegeSalary" class="alert alert-danger d-none text-center">Invalid Because Must Enter Numbers</p>
 
         <label for="productCategory" class="mb-2 fw-semibold"> Product Category</label>
-        <input type="text" id="productCategory" class="form-control mb-4" placeholder="ex : Mobile">
+        <input type="text" oninput="validationCategory()" id="productCategory" class="form-control mb-4" placeholder="ex : Mobile">
+        <p id="regexMessegeCategory" class="alert alert-danger d-none text-center">Invalid Because Must Start Be Mobile Or Tv Or ElectricProduct Or Else</p>
 
         <label for="productDesc" class="mb-2 fw-semibold"> Product Description</label>
         <textarea type="text" id="productDesc" class="form-control mb-4"  placeholder="ex : Good Product"></textarea>
@@ -30,8 +33,8 @@
                         <!-- End CRUD System Input Data -->
 
                         <!-- Start Of Table  -->
-    <div class="container text-center">
-        <input type="text" oninput="searchProduct(this.value)" placeholder="Search By Name .." class="mb-3 w-100 form-control">
+    <div   class="container text-center">
+        <input id="searchWord" type="search" oninput="searchProduct()" placeholder="Search By Name .." class="mb-3 w-100 form-control">
     <table class="table">
         <thead>
             <th>Index</th>
